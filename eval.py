@@ -72,7 +72,7 @@ def cal_distances(df,word_embeddings_train,word_embeddings_test):
 # Funzione che estrae gli embeddings dal modello
 def create_embeddings(df,layers):
     word_embeddings = []
-    base_dir = 'C:/Users/micof/OneDrive/Desktop/Lavoro Tesi/Disagreement/Dataset'
+    base_dir = './Disagreement/Dataset'
     tokenizer = BertTokenizer.from_pretrained(base_dir + '/TokenzierBert')
     for idx in range(1, len(df) + 1):
         with (torch.no_grad()):
@@ -132,12 +132,12 @@ def create_dataframe_distances(df_tot_train,df_test,file_name,plot_graph,save,la
 # Carico Modello
 model = primary_encoder_v2_no_pooler_for_con(768, 2)
 model.load_state_dict(
-    torch.load('C:/Users/micof/OneDrive/Desktop/Lavoro Tesi/Contrastive/save/SupCon/cifar10_models/models/infoNCEBest.pth'), strict=False)
+    torch.load('./models/infoNCEBest.pth'), strict=False)
 model.eval()
 gc.collect()
 
 # Carico e pulisco il dataset
-base_dir = 'C:/Users/micof/OneDrive/Desktop/Lavoro Tesi/Disagreement/Dataset'
+base_dir = './Disagreement/Dataset'
 
 print("Load Dati")
 
@@ -145,7 +145,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model.to(device)
 model.eval()
 
-base_dir = 'C:/Users/micof/OneDrive/Desktop/Lavoro Tesi/Disagreement/Dataset'
+base_dir = './Disagreement/Dataset'
 tokenizer = BertTokenizer.from_pretrained(base_dir + '/TokenzierBert')
 
 # Read csv test
