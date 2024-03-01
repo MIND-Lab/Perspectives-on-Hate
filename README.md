@@ -12,5 +12,3 @@ main_supcon.py --batch_size 128 \
 ```
 eval.py
 ```
-## Final Model
-The link of the trained model was uploaded on huggingface at the link https://huggingface.co/MF98/InfoNCE-HS
