@@ -1,7 +1,6 @@
 # Modeling disagreement in transformer-based methods for hate speech detection
-This GitHub repository contains the thesis work focused on applying contrastive learning to the context of disagreement.
+This GitHub repository contains the  work focused on a contrastive learning paradigm to model disagreement in hateful contents.
 The objective is to create a meaningful representation of the data in order to exploit the embeddings for the final prediction of disagreement.
-The full explanation of the disagreement prediction process is shown in the thesis in the repository in pdf format.
 ## Run training process
 ```
 main_supcon.py --batch_size 128 \
